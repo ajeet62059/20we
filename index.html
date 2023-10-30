@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=Latest+Cybersecurity+Threats",
+          "https://www.bing.com/search?q=Artificial+Intelligence+Innovations",
+          "https://www.bing.com/search?q=Blockchain+Technology+Applications",
+          "https://www.bing.com/search?q=Cloud+Computing+Advancements",
+          "https://www.bing.com/search?q=Internet+of+Things+(IoT)+Trends",
+          "https://www.bing.com/search?q=Data+Privacy+Regulations",
+          "https://www.bing.com/search?q=Machine+Learning+Algorithms",
+          "https://www.bing.com/search?q=Augmented+Reality+Developments",
+          "https://www.bing.com/search?q=5G+Technology+Impact",
+          "https://www.bing.com/search?q=Big+Data+Analytics+Innovations",
+          "https://www.bing.com/search?q=Cybersecurity+Best+Practices",
+          "https://www.bing.com/search?q=Mobile+App+Development+Frameworks",
+          "https://www.bing.com/search?q=Digital+Transformation+Strategies",
+          "https://www.bing.com/search?q=Open+Source+Software+Advantages",
+          "https://www.bing.com/search?q=Quantum+Computing+Breakthroughs",
+          "https://www.bing.com/search?q=IT+Project+Management+Tools",
+          "https://www.bing.com/search?q=Web+Development+Frameworks",
+          "https://www.bing.com/search?q=Cybersecurity+Training+Programs",
+          "https://www.bing.com/search?q=Robotic+Process+Automation+Applications",
+          "https://www.bing.com/search?q=Ethical+Hacking+Certifications",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
